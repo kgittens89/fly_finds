@@ -17,7 +17,7 @@ defmodule FlyFindsWeb.Router do
   scope "/", FlyFindsWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", LandingPageLive, :home
   end
 
   # Other scopes may use custom stacks.
