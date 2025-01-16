@@ -28,7 +28,6 @@ jobs:
         uses: superfly/fly-pr-review-apps@1.2.0
         with:
           app-name: pr-${{ github.event.number }}
-          config: fly.review.toml
 
       - name: Clean up GitHub environment
         uses: strumwolf/delete-deployment-environment@v2
