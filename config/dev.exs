@@ -23,7 +23,9 @@ config :fly_finds, FlyFindsWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
+  # secret_key_base: "Yh1Px3+pFVuua94URye/DVhfnDHQwtBMWbdZvKUlZyOy9b8MfyQQf2rYCNnxoXd/",
   secret_key_base: "Yh1Px3+pFVuua94URye/DVhfnDHQwtBMWbdZvKUlZyOy9b8MfyQQf2rYCNnxoXd/",
+  airportdb_api_key: System.get_env("AIRPORTDB_API_KEY"),
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:fly_finds, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:fly_finds, ~w(--watch)]}
