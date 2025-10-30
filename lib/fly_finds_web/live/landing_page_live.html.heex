@@ -7,5 +7,11 @@
         <div class="grid grid-cols-1 gap-4 mt-8">
             <img class="w-full rounded-lg" src="https://cdn.dribbble.com/users/1144645/screenshots/3953731/mktg-5976_air_ad_v02_43.gif" alt="landing plane">
         </div>
+        <.simple_form for={@form} phx-change="validate" phx-submit="search">
+            <.input type="text" field={@form[:icao_code]} label="ICAO Code" name="icao_code" />
+            <:actions>
+            <.button>Search</.button>
+            </:actions>
+        </.simple_form>
     </div>
 </section>
